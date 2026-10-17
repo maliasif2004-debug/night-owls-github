@@ -1,0 +1,353 @@
+<?php include "db.php"; ?>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jujutsu Kaisen Action Figures - Anime Store</title>
+
+    <style>
+/* NAVIGATION BAR */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+    background:rgba(0,0,0,.85);
+    border-bottom:2px solid #00ffff;
+}
+
+.logo{
+    color:#00ffff;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#00ffff;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top:40px;
+    background:rgba(0,0,0,.85);
+    padding:20px;
+    text-align:center;
+}
+
+.footer-links{
+    margin-bottom:12px;
+}
+
+.footer-links a{
+    color:#00ffff;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:bold;
+}
+
+.footer-links a:hover{
+    text-decoration:underline;
+}
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("new.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            text-shadow: 2px 2px 6px black;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            width: 90%;
+            margin: auto;
+        }
+
+        .card {
+            width: 220px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 8px 12px;
+            background: #00ffff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #00cccc;
+        }
+
+        .nav {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .nav a {
+            color: #00ffff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+<div class="navbar">
+
+    <div class="logo">
+        🦉 Night Owls
+    </div>
+
+    <div class="nav-links">
+        <a href="home.php">Home</a>
+      
+        <a href="cart.php">Cart</a>
+        <a href="about.php">About</a>
+        <a href="contact.php">Contact</a>
+        <a href="logout.php">Logout</a>
+    </div>
+
+</div>
+    <h1>⚡ Jujutsu Kaisen Action Figures Collection</h1>
+
+    <div class="container">
+
+<div class="card">
+    <img src="jjkfigure1.jpg">
+    <p><b>Gojo Satoru Figure</b></p>
+    <form action="add_to_cart.php" method="POST">
+        <input type="hidden" name="product_name" value="Gojo Satoru Figure">
+        <button type="submit">Add to Cart</button>
+    </form>
+</div>
+
+<div class="card">
+    <img src="jjkfigure2.jpg">
+    <p><b>Yuji Itadori Figure</b></p>
+    <form action="add_to_cart.php" method="POST">
+        <input type="hidden" name="product_name" value="Yuji Itadori Figure">
+        <button type="submit">Add to Cart</button>
+    </form>
+</div>
+
+<div class="card">
+    <img src="jjkfigure3.jpg">
+    <p><b>Megumi Fushiguro Figure</b></p>
+    <form action="add_to_cart.php" method="POST">
+        <input type="hidden" name="product_name" value="Megumi Fushiguro Figure">
+        <button type="submit">Add to Cart</button>
+    </form>
+</div>
+
+<div class="card">
+    <img src="jjkfigure4.jpg">
+    <p><b>Nobara Kugisaki Figure</b></p>
+    <form action="add_to_cart.php" method="POST">
+        <input type="hidden" name="product_name" value="Nobara Kugisaki Figure">
+        <button type="submit">Add to Cart</button>
+    </form>
+</div>
+
+<div class="card">
+    <img src="jjkfigure5.jpg">
+    <p><b>Ryomen Sukuna Figure</b></p>
+    <form action="add_to_cart.php" method="POST">
+        <input type="hidden" name="product_name" value="Ryomen Sukuna Figure">
+        <button type="submit">Add to Cart</button>
+    </form>
+</div>
+
+<div class="card">
+    <img src="jjkfigure6.jpg">
+    <p><b>Toji Fushiguro Figure</b></p>
+    <form action="add_to_cart.php" method="POST">
+        <input type="hidden" name="product_name" value="Toji Fushiguro Figure">
+        <button type="submit">Add to Cart</button>
+    </form>
+</div>
+
+<div class="card">
+    <img src="jjkfigure7.jpg">
+    <p><b>Yuta Okkotsu Figure</b></p>
+    <form action="add_to_cart.php" method="POST">
+        <input type="hidden" name="product_name" value="Yuta Okkotsu Figure">
+        <button type="submit">Add to Cart</button>
+    </form>
+</div>
+
+<div class="card">
+    <img src="jjkfigure8.jpg">
+    <p><b>Maki Zenin Figure</b></p>
+    <form action="add_to_cart.php" method="POST">
+        <input type="hidden" name="product_name" value="Maki Zenin Figure">
+        <button type="submit">Add to Cart</button>
+    </form>
+</div>
+
+<div class="card">
+    <img src="jjkfigure9.jpg">
+    <p><b>Toge Inumaki Figure</b></p>
+    <form action="add_to_cart.php" method="POST">
+        <input type="hidden" name="product_name" value="Toge Inumaki Figure">
+        <button type="submit">Add to Cart</button>
+    </form>
+</div>
+
+<div class="card">
+    <img src="jjkfigure10.jpg">
+    <p><b>Panda Figure</b></p>
+    <form action="add_to_cart.php" method="POST">
+        <input type="hidden" name="product_name" value="Panda Figure">
+        <button type="submit">Add to Cart</button>
+    </form>
+</div>
+
+<div class="card">
+    <img src="jjkfigure11.jpg">
+    <p><b>Kento Nanami Figure</b></p>
+    <form action="add_to_cart.php" method="POST">
+        <input type="hidden" name="product_name" value="Kento Nanami Figure">
+        <button type="submit">Add to Cart</button>
+    </form>
+</div>
+
+<div class="card">
+    <img src="jjkfigure12.jpg">
+    <p><b>Suguru Geto Figure</b></p>
+    <form action="add_to_cart.php" method="POST">
+        <input type="hidden" name="product_name" value="Suguru Geto Figure">
+        <button type="submit">Add to Cart</button>
+    </form>
+</div>
+
+<div class="card">
+    <img src="jjkfigure13.jpg">
+    <p><b>Mahito Figure</b></p>
+    <form action="add_to_cart.php" method="POST">
+        <input type="hidden" name="product_name" value="Mahito Figure">
+        <button type="submit">Add to Cart</button>
+    </form>
+</div>
+
+<div class="card">
+    <img src="jjkfigure14.jpg">
+    <p><b>Choso Figure</b></p>
+    <form action="add_to_cart.php" method="POST">
+        <input type="hidden" name="product_name" value="Choso Figure">
+        <button type="submit">Add to Cart</button>
+    </form>
+</div>
+
+<div class="card">
+    <img src="jjkfigure15.jpg">
+    <p><b>Jogo Figure</b></p>
+    <form action="add_to_cart.php" method="POST">
+        <input type="hidden" name="product_name" value="Jogo Figure">
+        <button type="submit">Add to Cart</button>
+    </form>
+</div>
+
+<div class="card">
+    <img src="jjkfigure16.jpg">
+    <p><b>Hanami Figure</b></p>
+    <form action="add_to_cart.php" method="POST">
+        <input type="hidden" name="product_name" value="Hanami Figure">
+        <button type="submit">Add to Cart</button>
+    </form>
+</div>
+
+<div class="card">
+    <img src="jjkfigure17.jpg">
+    <p><b>Mahoraga Figure</b></p>
+    <form action="add_to_cart.php" method="POST">
+        <input type="hidden" name="product_name" value="Mahoraga Figure">
+        <button type="submit">Add to Cart</button>
+    </form>
+</div>
+
+<div class="card">
+    <img src="jjkfigure18.jpg">
+    <p><b>Gojo Hollow Purple Figure</b></p>
+    <form action="add_to_cart.php" method="POST">
+        <input type="hidden" name="product_name" value="Gojo Hollow Purple Figure">
+        <button type="submit">Add to Cart</button>
+    </form>
+</div>
+
+<div class="card">
+    <img src="jjkfigure19.jpg">
+    <p><b>Sukuna Domain Expansion Figure</b></p>
+    <form action="add_to_cart.php" method="POST">
+        <input type="hidden" name="product_name" value="Sukuna Domain Expansion Figure">
+        <button type="submit">Add to Cart</button>
+    </form>
+</div>
+
+<div class="card">
+    <img src="jjkfigure20.jpg">
+    <p><b>Jujutsu High Group Figure</b></p>
+    <form action="add_to_cart.php" method="POST">
+        <input type="hidden" name="product_name" value="Jujutsu High Group Figure">
+        <button type="submit">Add to Cart</button>
+    </form>
+</div>
+
+    </div>
+
+    <footer>
+        <b>&copy; 2026 Night Owls Anime Store</b>
+    </footer>
+
+</body>
+</html>
